@@ -1,0 +1,231 @@
+// About Us section
+.about-us-section{
+    margin-top: 50px;
+    .about-us-heading-text{
+        font-family: $primary-font;
+        font-weight: 700;
+        font-size: 3em;
+        color: #2d2d2d;
+    }
+    .about-us-text{
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 1em;
+        color: #818890;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 20px;
+    }
+    .about-us-text-second{
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 1em;
+        color: #818890;
+        padding: 0;
+        margin: 0;
+    }
+    .about-us-btn-container{
+        margin-top: 30px;
+        .about-us-btn{
+            text-decoration: none;
+            text-align: center;
+            color: #ffffff;
+            background-color: $primary-color;
+            font-size: 0.9em;
+            padding: 15px 45px;
+            display: inline-block;
+            font-family: $primary-font;
+            font-weight: 600;
+            border-radius: 5px;
+            border:1px solid $primary-color;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background-color: transparent;
+                color: $primary-color;
+            }
+        }
+    }
+    .img-container{
+        overflow: hidden;
+         border-radius: 10px;
+         margin-left: 30px;
+        .aboutUs-image{
+            width: 100%;   
+        }
+    }
+}
+
+//gallery section
+.gallery-sec {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .gallery-heading {
+        font-family: $primary-font;
+        font-weight: 700;
+        text-align: center;
+        color: #2d2d2d;
+        font-size: 3em;
+        margin-bottom: 27px;
+    }
+    .gallery{
+        .glightbox{
+            transition: opacity 0.2s ease-in-out;
+            img{
+                width: 100%;
+                border-radius: 8px;
+            }
+            &:hover{
+                opacity: 0.9;
+            }
+        }
+        
+    }  
+    .gallery-btn-container{
+        text-align: center;
+        width: 100%;
+        margin-top: 44px;
+        .gallery-btn{
+            text-decoration: none;
+            text-align: center;
+            color: #ffffff;
+            background-color: $primary-color;
+            font-size: 0.9em;
+            padding: 15px 45px;
+            display: inline-block;
+            font-family: $primary-font;
+            font-weight: 600;
+            border-radius: 5px;
+            border:1px solid $primary-color;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background-color: transparent;
+                color: $primary-color;
+            }
+        }
+    } 
+}
+
+// blog section
+.blog-section{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    .blog-heading{
+        font-family: $primary-font;
+        font-weight: 700;
+        text-align: center;
+        color: #2d2d2d;
+        font-size: 3em;
+        margin-bottom: 27px;
+    } 
+    .blog-text{
+        text-decoration: none;
+        .card{
+            border: none;
+            .img-container{
+                overflow: hidden;
+                position: relative;
+                .card-img-top{
+                    border-radius: 10px;
+                    transition: transform .4s ease-in-out;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -75%;
+                    z-index: 2;
+                    display: block; 
+                    width: 50%;
+                    height: 100%;
+                    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+                    transform: skewX(-25deg);
+                    transition: none;
+                }
+                &:hover{
+                    .card-img-top{
+                        transform: scale(1.2);
+                    }
+                    &::before{
+                        transition: left 0.4s ease-in;
+                        left: 100%;
+                    }    
+                }
+            }
+            
+            .card-body{
+                padding: 0;
+                .card-date{
+                    padding-top: 25px;
+                    text-align: left;
+                    font-family: $secondary-font;
+                    font-weight: 400;
+                    font-size: 1em; 
+                    color: #777777;
+                    margin: 0;
+                }
+                .card-heading-text{
+                    padding-top: 10px;
+                    text-align: left;
+                    font-family: $primary-font;
+                    font-weight: 600;
+                    font-size: 1.2em; 
+                    color: #3a3a3a;
+                    margin: 0;
+                    padding-bottom: 8px;
+                    }
+                .card-text{
+                    text-align: left;
+                    font-family: $secondary-font;
+                    font-weight: 400;
+                    font-size: 1em; 
+                    color: #777777;
+                }
+                .readmore-btn{
+                    text-decoration: none;
+                    color: $primary-color;
+                    font-size: 0.9em;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-family: $secondary-font;
+                    display: inline-flex;
+                    align-items: center;
+                    column-gap: 5px;
+                    svg{
+                        height: 15px;
+                        width: 15px;
+                        fill: $primary-color;
+                        transition: transform 0.2s ease-in-out;
+                    }
+                    &:hover{
+                        svg{
+                            transform: translateX(5px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .blog-btn-container{
+        text-align: center;
+        width: 100%;
+        margin-top: 44px;
+        .blog-btn{
+            text-decoration: none;
+            text-align: center;
+            color: #ffffff;
+            background-color: $primary-color;
+            font-size: 0.9em;
+            padding: 15px 45px;
+            display: inline-block;
+            font-family: $primary-font;
+            font-weight: 600;
+            border-radius: 5px;
+            border:1px solid $primary-color;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background-color: transparent;
+                color: $primary-color;
+            }
+        }
+    } 
+}  
