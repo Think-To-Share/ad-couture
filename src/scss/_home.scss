@@ -1,16 +1,135 @@
+// banner section
+.ad-couture-banner-section{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 650px;
+
+    .container{
+        height: 100%;
+        .banner-main{
+            display:flex;
+            align-items: center;
+            height: 100%;
+            .ad-couture-banner-text{
+                .banner-heading{
+                    font-family: $primary-font;
+                    font-weight: 500;
+                    @include font-size(4rem);
+                    color: #ffffff;
+                    span{
+                        font-weight: 600;
+                        @include font-size(5.6rem);
+                    }
+                }
+                .banner-heading-text{
+                    font-family: $primary-font;
+                    font-weight: 400;
+                    @include font-size(1.3rem);
+                    color: #ffffff;
+                }
+                .banner-btn-container{
+                    margin-top: 44px;
+                    .banner-btn{
+                        text-decoration: none;
+                        text-align: center;
+                        color: #ffffff;
+                        background-color: transparent;
+                        @include font-size(1rem);
+                        padding: 20px 75px;
+                        display: inline-block;
+                        font-family: $primary-font;
+                        font-weight: 600;
+                        border-radius: 5px;
+                        border:2px solid #ffffff;
+                        transition: all 0.3s ease-in-out;
+                        text-transform: uppercase;
+                        &:hover{
+                            border:2px solid $primary-color;
+                            background-color: $primary-color;
+                        }
+                    }
+                } 
+            }
+        }
+    }
+    
+}
+
+// Explore ad-couture section
+.explorer-sec{
+    margin-top: 30px;
+    margin-bottom: 120px;
+    .section-heading{
+        .explorer-heading{
+            text-align: center;
+            font-family: $primary-font;
+            font-weight: 700;
+            @include font-size(4rem);
+            color: #2d2d2d;
+            padding-bottom: 27px;
+            span{
+                color: $primary-color;
+                @include font-size(5.3rem);
+            }
+        }
+        .image-main{
+           padding:0 30px;
+            .col{
+                a{
+                    .explorer-image{
+                        border-radius: 50%;
+                        overflow: hidden;
+                        position: relative;
+                        height: 20vw;
+                        width: 20vw;
+                        margin: 0 auto;
+                        background-color: #000;
+                        transition: background-color 0.2s ease-in-out;
+                        &:hover{
+                            background-color: $primary-color;
+                        }
+                        img{ 
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            width: 100%;
+                            opacity: 0.5;
+                        }
+                        .explorer-name{
+                           position: absolute;
+                           top: 50%;
+                           left: 50%;
+                           transform: translate(-50%,-50%);
+                           @include font-size(2rem);
+                           color: #ffffff;
+                           font-family: $primary-font;
+                           font-weight: 700;
+                           text-transform: uppercase;
+                           text-align: center;
+                        }
+                    }
+                }
+               
+            }
+        }
+    }
+}
+
 // About Us section
 .about-us-section{
     margin-top: 50px;
     .about-us-heading-text{
         font-family: $primary-font;
         font-weight: 700;
-        font-size: 3em;
+        @include font-size(4.5rem);
         color: #2d2d2d;
     }
     .about-us-text{
         font-family: $secondary-font;
         font-weight: 400;
-        font-size: 1em;
+         @include font-size(1rem);
         color: #818890;
         padding: 0;
         margin: 0;
@@ -19,7 +138,7 @@
     .about-us-text-second{
         font-family: $secondary-font;
         font-weight: 400;
-        font-size: 1em;
+         @include font-size(1rem);
         color: #818890;
         padding: 0;
         margin: 0;
@@ -31,7 +150,7 @@
             text-align: center;
             color: #ffffff;
             background-color: $primary-color;
-            font-size: 0.9em;
+            @include font-size(0.9rem);
             padding: 15px 45px;
             display: inline-block;
             font-family: $primary-font;
@@ -55,8 +174,46 @@
     }
 }
 
+
+//studio section
+.studio-sec{
+    .studio-section-heading{
+        .studio-heading{
+            font-family: $primary-font;
+            font-weight: 700;
+            text-align: center;
+            color: #2d2d2d;
+            @include font-size(4.5rem);
+            margin-bottom: 27px;
+        }
+        .video-image{
+            width: 100%;
+            overflow: hidden;
+            height: 600px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.gallery-about-bkg{
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: #f3f4f1;
+        height: 80%;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
 //gallery section
 .gallery-sec {
+    position: relative;
     margin-top: 50px;
     margin-bottom: 50px;
     .gallery-heading {
@@ -64,7 +221,7 @@
         font-weight: 700;
         text-align: center;
         color: #2d2d2d;
-        font-size: 3em;
+        @include font-size(4.5rem);
         margin-bottom: 27px;
     }
     .gallery{
@@ -89,7 +246,7 @@
             text-align: center;
             color: #ffffff;
             background-color: $primary-color;
-            font-size: 0.9em;
+            @include font-size(0.9rem);
             padding: 15px 45px;
             display: inline-block;
             font-family: $primary-font;
@@ -105,6 +262,77 @@
     } 
 }
 
+// Testimonial section 
+.testimonial-section{
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    .testimonial-heading{
+        margin-top: 166px;
+        font-family: $primary-font;
+        font-weight: 500;
+        color: #1b1b1b;
+        @include font-size(3rem);
+        span{
+            font-weight: 700;
+            @include font-size(4rem);
+        }
+    }
+    .testimonial-text{
+        color: #525252;
+        font-family: $secondary-font;
+        font-weight: 400;
+        @include font-size(1.2rem);
+    }
+    .testimonial-text-second{
+        color: #525252;
+        font-family: $secondary-font;
+        font-weight: 400;
+        @include font-size(1.2rem);
+    }
+    .t-box{
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow:0 0 90px change-color($color: #d8dadd, $alpha: 0.4);
+        background: #fff;
+        &:first-child{
+            margin-bottom: 1rem;
+        }
+        img{
+
+        }
+        .testimonial-text{
+            padding-top: 20px;
+            font-family: $secondary-font;
+            font-weight: 400;
+            color: #525252;
+            @include font-size(1.1rem);
+            margin: 0;
+        }
+        .author-name{
+            font-family: $secondary-font;
+            font-weight: 700;
+            color: $primary-color;
+            @include font-size(1rem);
+            margin-top: 35px;
+        }
+        .testimonial-t-text{
+            padding-top: 20px;
+            font-family: $secondary-font;
+            font-weight: 400;
+            color: #525252;
+            @include font-size(1.1rem);
+        }
+    }
+    .testimonial-left{
+       
+    }
+    .testimonial-right{
+        display: flex;
+        align-items: center;
+    }
+}
+
 // blog section
 .blog-section{
     margin-top: 30px;
@@ -114,7 +342,7 @@
         font-weight: 700;
         text-align: center;
         color: #2d2d2d;
-        font-size: 3em;
+        @include font-size(4.5rem);
         margin-bottom: 27px;
     } 
     .blog-text{
@@ -159,7 +387,7 @@
                     text-align: left;
                     font-family: $secondary-font;
                     font-weight: 400;
-                    font-size: 1em; 
+                     @include font-size(1rem); 
                     color: #777777;
                     margin: 0;
                 }
@@ -168,7 +396,7 @@
                     text-align: left;
                     font-family: $primary-font;
                     font-weight: 600;
-                    font-size: 1.2em; 
+                    @include font-size(1.2rem);
                     color: #3a3a3a;
                     margin: 0;
                     padding-bottom: 8px;
@@ -177,13 +405,13 @@
                     text-align: left;
                     font-family: $secondary-font;
                     font-weight: 400;
-                    font-size: 1em; 
+                    @include font-size(1rem); 
                     color: #777777;
                 }
                 .readmore-btn{
                     text-decoration: none;
                     color: $primary-color;
-                    font-size: 0.9em;
+                    @include font-size(1rem);
                     text-transform: uppercase;
                     font-weight: 700;
                     font-family: $secondary-font;
@@ -214,7 +442,7 @@
             text-align: center;
             color: #ffffff;
             background-color: $primary-color;
-            font-size: 0.9em;
+            @include font-size(0.9rem);
             padding: 15px 45px;
             display: inline-block;
             font-family: $primary-font;
@@ -228,4 +456,139 @@
             }
         }
     } 
-}  
+}
+
+// contact us section
+.contact-us-section{
+    margin-top: 80px;
+    margin-bottom: 50px;
+    .contact-us-heading{
+        font-family: $primary-font;
+        font-weight: 700;
+        color: #2d2d2d;
+        @include font-size(4.5rem);
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .contact-us-left{
+        .contact-box{
+            background-color: #e3e7e8;
+            border-radius: 10px;
+            padding: 30px;
+            &:first-child{
+                margin-bottom: 1rem;
+            }
+            svg{
+                height: 80px;
+                width: 80px;
+            }
+            .c-heading{
+                padding-top: 15px;
+                color: #2e3234;
+                font-family: $primary-font;
+                font-weight: 700;
+                @include font-size(2.3rem);
+                text-transform: uppercase;
+            }
+            .contact-us-text{
+                color: #676767;
+                font-family: $primary-font;
+                font-weight: 400;
+                @include font-size(1rem);
+            }
+            .banner-btn-container{
+                margin-top: 25px;
+                .banner-btn{
+                    text-decoration: none;
+                    text-align: center;
+                    color: #ffffff;
+                    background-color: #1b1b1b;
+                    @include font-size(1rem);
+                    padding: 15px 40px;
+                    display: inline-block;
+                    font-family: $primary-font;
+                    font-weight: 600;
+                    border:2px solid #ffffff;
+                    transition: all 0.3s ease-in-out;
+                    text-transform: uppercase;
+                    &:hover{
+                       color: #1b1b1b;
+                       background-color: transparent;
+                       border: 2px solid #1b1b1b;
+                    }
+                }
+            }
+        }
+    }
+    .coloum{
+        padding-left: 60px;
+        .contact-us-form-text{
+            font-family: $primary-font;
+            font-weight: 700;
+            color: #1b1b1b;
+            @include font-size(4.1rem);
+            margin-top: 50px;
+        }
+        .contact-us-text{
+            font-family: $primary-font;
+            font-weight: 400;
+            color: #818890;
+            @include font-size(1.1rem);
+        }
+        .contact-card{
+            form{
+                input{
+                    width: 100%;
+                    @include padding-right(1.2rem);
+                    @include padding-left(1.2rem);
+                    @include padding-top(0.9rem);
+                    @include padding-bottom(0.9rem);
+                    border-radius: 5px;
+                    border: 1px solid #dcdfe3;
+                    color: #818890;
+                    outline: none;
+                    @include font-size(1.1rem);
+                    &::placeholder{
+                        color: #818890;
+                    }
+                }
+                textarea{
+                    width: 100%;
+                    @include padding-right(1.2rem);
+                    @include padding-left(1.2rem);
+                    @include padding-top(0.9rem);
+                    border-radius: 5px;
+                    border: 1px solid #dcdfe3;
+                    @include font-size(1.1rem);
+                    outline: none;
+                    &::placeholder{
+                        color: #818890;
+                    }
+                }
+                .btn-container{
+                    margin-top: 25px;
+                    .btn-submit{
+                        text-decoration: none;
+                        text-align: center;
+                        color: #ffffff;
+                        background-color: $primary-color;
+                        @include font-size(1rem);
+                        padding: 20px 70px;
+                        display: inline-block;
+                        font-family: $primary-font;
+                        font-weight: 600;
+                        border:2px solid #ffffff;
+                        transition: all 0.3s ease-in-out;
+                        text-transform: uppercase;
+                        border-radius: 10px;
+                        &:hover{
+                           color: $primary-color;
+                           background-color: transparent;
+                           border: 2px solid $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

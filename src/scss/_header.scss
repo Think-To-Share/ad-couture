@@ -1,0 +1,92 @@
+.ad-couture-header {
+    background-color: #040404;
+    padding: 15px 50px;
+    .header-main {
+        display: flex;
+        justify-content: space-between;
+        .logo-side {
+            width: 8%;
+
+            img {
+                display: none;
+
+                @media (min-width: 768px) {
+                    display: block;
+                    width: 100%;
+                    margin:0 auto;
+                }
+            }
+        }
+        .ad-couture-menu-side {
+            display: none;
+            // width: 100%;
+            ul {
+                display: flex;
+                justify-content: center;
+                gap: 66px;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                align-items: center;
+                li {
+                    list-style-type: none;
+                    padding: 15px 0;
+                    letter-spacing: 2.2px;
+
+                    a {
+                        text-decoration: none;
+                        color: #fffffe;
+                        font-family: $primary-font;
+                        font-weight: 500;
+                        @include font-size(0.9rem);
+                        // padding: 10px 7px;
+                        text-transform: uppercase;
+                        transition: color 0.3s ease-in-out;
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+            @media (min-width: 768px) {
+                display: block;
+            }
+        }
+        .search-bar{
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            
+            svg{
+                --size: 30px;
+                height: var(--size);
+                width: var(--size);
+                color: $primary-color;
+            }
+        }
+        
+    }
+}
+
+
+.top-bar{
+    @include font-size(0.8rem);
+    text-align: center;
+    font-family: $primary-font;
+    font-weight: 600;
+    background-color:$primary-color;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px 0;
+    margin: 0;
+    backdrop-filter: blur(23px); 
+    .slides{
+        .slide{
+            .top-bar-text{
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}

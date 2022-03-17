@@ -33,6 +33,7 @@
   "dependencies": {
     "bootstrap": "^5.0.1",
     "glightbox": "^3.2.0",
+    "rfs": "^9.0.6",
     "tiny-slider": "^2.9.4"
   }
 }
