@@ -5,8 +5,11 @@
     text-align: center;
     img{
         padding-top: 80px;
-        width: 17%;
+        width: 30%;
         padding-bottom: 20px;
+        @media (min-width: 768px) {
+            width: 17%;
+        }
     }
     .mail-call-text{
         color: #ffffff;
@@ -43,16 +46,26 @@
         ul {
             display: flex;
             justify-content: center;
-            gap: 66px;
+            gap: 15px;
             width: 100%;
             margin: 0;
             padding: 0;
             height: 100%;
             align-items: center;
+            flex-direction: column;
+            @media (min-width:768px) {
+                gap: 30px;
+                flex-direction: row;
+            }
+            @media (min-width: 992px) {
+                gap: 66px;
+            }
             li {
                 list-style-type: none;
-                padding: 15px 0;
                 letter-spacing: 2.2px;
+                @media (min-width:768px) {
+                    padding: 15px 0;
+                }
                 a {
                     text-decoration: none;
                     color: #a7a7a7;

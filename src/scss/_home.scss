@@ -36,7 +36,10 @@
                         color: #ffffff;
                         background-color: transparent;
                         @include font-size(1rem);
-                        padding: 20px 75px;
+                        @include padding-top(1.1rem);
+                        @include padding-right(4rem);
+                        @include padding-bottom(1.1rem);
+                        @include padding-left(4rem);
                         display: inline-block;
                         font-family: $primary-font;
                         font-weight: 600;
@@ -81,11 +84,19 @@
                         border-radius: 50%;
                         overflow: hidden;
                         position: relative;
-                        height: 20vw;
-                        width: 20vw;
+                        height: 70vw;
+                        width: 70vw;
                         margin: 0 auto;
                         background-color: #000;
                         transition: background-color 0.2s ease-in-out;
+                        @media (min-width:556px) {
+                            height: 40vw;
+                            width: 40vw;  
+                        }
+                        @media (min-width:992px) {
+                            height: 20vw;
+                            width: 20vw;  
+                        }
                         &:hover{
                             background-color: $primary-color;
                         }
@@ -177,6 +188,8 @@
 
 //studio section
 .studio-sec{
+    margin-top: 50px;
+    margin-bottom: 30px;
     .studio-section-heading{
         .studio-heading{
             font-family: $primary-font;
@@ -186,30 +199,78 @@
             @include font-size(4.5rem);
             margin-bottom: 27px;
         }
-        .video-image{
+    }
+    .video-image{
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        position: relative;
+        img{
             width: 100%;
-            overflow: hidden;
-            height: 600px;
-            img{
-                width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            background: #000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+        }
+        svg{
+            --size:50px;
+            width: var(--size);
+            height:var(--size);
+            color: $primary-color;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            position: absolute;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+            @media (min-width:768px) {
+            --size:70px; 
             }
+            &:hover{
+                transform:translate(-50%,-50%) scale(1.1);
+            }
+        }
+        &.hide{
+            display: none;
+        }
+    }
+    .video{
+        width: 100%;
+        aspect-ratio: 16 / 9;
+
+        iframe{
+            width: 100%;
+            aspect-ratio: 16 / 9;
+        }
+        &.hide{
+            display: none;
         }
     }
 }
 
 .gallery-about-bkg{
     position: relative;
-
     &::before {
         content: '';
         position: absolute;
         background-color: #f3f4f1;
-        height: 80%;
+        height: 100%;
         width: 100%;
         top: 50%;
         left: 0;
         transform: translateY(-50%);
+        @media (min-width:768px) {
+            height: 80%;
+        }
     }
+   
 }
 //gallery section
 .gallery-sec {
@@ -224,7 +285,7 @@
         @include font-size(4.5rem);
         margin-bottom: 27px;
     }
-    .gallery{
+    .adc-gallery{
         .glightbox{
             transition: opacity 0.2s ease-in-out;
             img{
@@ -268,7 +329,7 @@
     margin-top: 80px;
     margin-bottom: 50px;
     .testimonial-heading{
-        margin-top: 166px;
+        margin-top: 0;
         font-family: $primary-font;
         font-weight: 500;
         color: #1b1b1b;
@@ -276,6 +337,9 @@
         span{
             font-weight: 700;
             @include font-size(4rem);
+        }
+        @media (min-width:1200px) {
+            margin-top: 166px;
         }
     }
     .testimonial-text{
@@ -324,12 +388,19 @@
             @include font-size(1.1rem);
         }
     }
-    .testimonial-left{
-       
-    }
-    .testimonial-right{
+    .t-container {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        @media (min-width:1200px) {
+            flex-direction: row;
+        }
+        .testimonial-left{
+       
+        }
+        .testimonial-right{
+            display: flex;
+            align-items: center;
+        }
     }
 }
 
@@ -521,7 +592,10 @@
         }
     }
     .coloum{
-        padding-left: 60px;
+        padding-left: 10px;
+        @media (min-width:992px) {
+            padding-left: 60px; 
+        }
         .contact-us-form-text{
             font-family: $primary-font;
             font-weight: 700;
@@ -567,13 +641,20 @@
                 }
                 .btn-container{
                     margin-top: 25px;
+                    text-align: center;
+                    @media (min-width:576px) {
+                        text-align: left;
+                    }
                     .btn-submit{
                         text-decoration: none;
                         text-align: center;
                         color: #ffffff;
                         background-color: $primary-color;
                         @include font-size(1rem);
-                        padding: 20px 70px;
+                        @include padding-top(1.2rem);
+                        @include padding-right(4.5rem);
+                        @include padding-bottom(1.2rem);
+                        @include padding-left(4.5rem);
                         display: inline-block;
                         font-family: $primary-font;
                         font-weight: 600;
@@ -581,6 +662,10 @@
                         transition: all 0.3s ease-in-out;
                         text-transform: uppercase;
                         border-radius: 10px;
+                        width: 100%;
+                        @media (min-width:576px) {
+                            width: auto;
+                        }
                         &:hover{
                            color: $primary-color;
                            background-color: transparent;

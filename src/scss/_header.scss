@@ -1,15 +1,17 @@
 .ad-couture-header {
     background-color: #040404;
     padding: 15px 50px;
+    display: none;
     .header-main {
         display: flex;
         justify-content: space-between;
         .logo-side {
-            width: 8%;
-
+            width: 10%;
+            @media (min-width: 1200px){
+                width: 8%; 
+            }
             img {
                 display: none;
-
                 @media (min-width: 768px) {
                     display: block;
                     width: 100%;
@@ -23,12 +25,15 @@
             ul {
                 display: flex;
                 justify-content: center;
-                gap: 66px;
+                gap: 47px;
                 width: 100%;
                 margin: 0;
                 padding: 0;
                 height: 100%;
                 align-items: center;
+                @media (min-width: 1200px){
+                    gap: 66px;
+                }
                 li {
                     list-style-type: none;
                     padding: 15px 0;
@@ -66,6 +71,9 @@
             }
         }
         
+    }
+    @media (min-width: 992px) {
+        display: block;
     }
 }
 
