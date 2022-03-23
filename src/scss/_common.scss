@@ -1,91 +1,85 @@
-$size: 1em;
-$timing: ease;
-
-$white: #fff;
-
-@mixin transition($time, $timing) {
-	-webkit-transition: $time $timing all;
-	   -moz-transition: $time $timing all;
-			transition: $time $timing all;
+.page-hero-section{
+    height: 500px;
+    margin-bottom: 54px;
+    .img-bg{
+        height: 100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hero-heading{
+     text-align: center;
+     color: #fff;
+     font-family: $secondary-font;
+     font-weight: 600;
+     @include font-size(4rem);
+    }
 }
 
-#search-menu {
-	position: fixed;
-	width: 100%;
-	height: $size * 20;
-	top: -$size * 20;
-	left: 0;
-	right: 0;
-	white-space: nowrap;
-	z-index: 9999;
-	background: -moz-linear-gradient(top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.80) 50%, rgba(0,0,0,0.01) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.80)), color-stop(50%,rgba(0,0,0,0.80)), color-stop(100%, rgba(0,0,0,0.01)));
-	background: -webkit-linear-gradient(top, rgba(0,0,0,0.80) 0%,rgba(0,0,0,0.80) 50%, rgba(0,0,0,0.01) 100%);
-	background: -o-linear-gradient(top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.80) 50%, rgba(0,0,0,0.01) 100%);
-	background: -ms-linear-gradient(top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.80) 50%, rgba(0,0,0,0.01) 100%); 
-	background: linear-gradient(to bottom, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.80) 50%, rgba(0,0,0,0.01) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#1a000000',GradientType=0);
-	opacity: 0;
-	visibility: hidden;
-	@include transition(500ms, $timing);
-
-	&.toggled {
-		top: 0;
-		opacity: 1;
-		visibility: visible;
-	}
-
-	.wrapper {
-		position: relative;
-		margin: $size * 3 auto 0 auto;
-		padding: 0 $size;
-
-		input {
-			width: 90%;
-			padding: 0 0 $size / 8 0;
-			background: transparent;
-			border: none;
-			border-bottom: 3px solid darken($white, 25%);
-			font-size: $size * 4;
-			color: darken($white, 25%);
-
-			&:focus {
-				outline: none;
-			}
-		}
-
-		button {
-			position: absolute;
-			display: block;
-			width: 10%;
-			right: 0;
-			top: 0;
-			background: transparent;
-			border: none;
-			color: darken(#000, 25%);
-			font-size: $size * 4;
-			@include transition(500ms, $timing);
-
-			&:hover {
-				color: $white;
-			}
-
-			&:focus {
-				outline: none;
-			}
-		}
-	}
-}
-
-#search-icon {
-	padding: 0 $size / 2 $size / 4 $size / 2;
-	font-size: $size * 5;
-	cursor: pointer;
-	color: darken($white, 25%);
-	text-align: center;
-	@include transition(500ms, $timing);
-
-	&:hover {
-		color: $white;
-	}
+.contact-card{
+    form{
+        input{
+            width: 100%;
+            @include padding-right(1.2rem);
+            @include padding-left(1.2rem);
+            @include padding-top(0.9rem);
+            @include padding-bottom(0.9rem);
+            border-radius: 5px;
+            border: 1px solid #dcdfe3;
+            color: #818890;
+            outline: none;
+            @include font-size(1.1rem);
+            &::placeholder{
+                color: #818890;
+            }
+        }
+        textarea{
+            width: 100%;
+            @include padding-right(1.2rem);
+            @include padding-left(1.2rem);
+            @include padding-top(0.9rem);
+            border-radius: 5px;
+            border: 1px solid #dcdfe3;
+            @include font-size(1.1rem);
+            outline: none;
+            &::placeholder{
+                color: #818890;
+            }
+        }
+        .btn-container{
+            margin-top: 25px;
+            text-align: center;
+            @media (min-width:576px) {
+                text-align: left;
+            }
+            .btn-submit{
+                text-decoration: none;
+                text-align: center;
+                color: #ffffff;
+                background-color: $primary-color;
+                @include font-size(1rem);
+                @include padding-top(1.2rem);
+                @include padding-right(4.5rem);
+                @include padding-bottom(1.2rem);
+                @include padding-left(4.5rem);
+                display: inline-block;
+                font-family: $primary-font;
+                font-weight: 600;
+                border:2px solid #ffffff;
+                transition: all 0.3s ease-in-out;
+                text-transform: uppercase;
+                border-radius: 10px;
+                width: 100%;
+                @media (min-width:576px) {
+                    width: auto;
+                }
+                &:hover{
+                   color: $primary-color;
+                   background-color: transparent;
+                   border: 2px solid $primary-color;
+                }
+            }
+        }
+    }
 }
