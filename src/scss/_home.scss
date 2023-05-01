@@ -62,7 +62,7 @@
 // Explore ad-couture section
 .explorer-sec{
     margin-top: 30px;
-    margin-bottom: 120px;
+    margin-bottom: 10px;
     .section-heading{
         .explorer-heading{
             text-align: center;
@@ -134,25 +134,38 @@
     .about-us-heading-text{
         font-family: $primary-font;
         font-weight: 700;
-        @include font-size(4.5rem);
+        @include font-size(1.2rem);
         color: #2d2d2d;
+        text-align: center;
+        @media (min-width: 992px) {
+            @include font-size(4.5rem);
+            text-align: left;
+        }
     }
     .about-us-text{
         font-family: $secondary-font;
         font-weight: 400;
-         @include font-size(1rem);
+        @include font-size(1.2rem);
         color: #818890;
         padding: 0;
         margin: 0;
         padding-bottom: 20px;
+        text-align: center;
+        @media (min-width: 992px) {
+            text-align: left;
+        }
     }
     .about-us-text-second{
         font-family: $secondary-font;
         font-weight: 400;
-         @include font-size(1rem);
+        @include font-size(1.2rem);
         color: #818890;
         padding: 0;
         margin: 0;
+        // text-align: center;
+        // @media (min-width: 992px) {
+        //     text-align: left;
+        // }
     }
     .about-us-btn-container{
         margin-top: 30px;
@@ -179,15 +192,17 @@
         overflow: hidden;
         border-radius: 10px;
         .aboutUs-image{
-            width: 100%;
-            
-            @media (min-width: 992px) {
-                width: 80%;
-            }
+            width: 30%;
+            margin: 0 auto;
+            display: flex;
+            margin-bottom: 13px;
+            // @media (min-width: 992px) {
+            //     width: 80%;
+            // }
 
-            @media (min-width: 1400px) {
-                width: 60%;
-            }
+            // @media (min-width: 1400px) {
+            //     width: 30%;
+            // }
         }
     }
 }
